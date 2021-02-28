@@ -41,10 +41,10 @@ detector = dlib.get_frontal_face_detector()
 cap = cv2.VideoCapture(0)
 
 # для записи видео
-vid_cod = cv2.VideoWriter_fourcc(*'XVID')
-path = 'saved_videos'
-num_files = sum(os.path.isfile(os.path.join(path, f)) for f in os.listdir(path))
-output = cv2.VideoWriter(f"saved_videos/cam_video-{num_files+1}.mp4", vid_cod, 20.0, (int(cap.get(3)),int(cap.get(4))))
+# vid_cod = cv2.VideoWriter_fourcc(*'XVID')
+# path = 'saved_videos'
+# num_files = sum(os.path.isfile(os.path.join(path, f)) for f in os.listdir(path))
+# output = cv2.VideoWriter(f"saved_videos/cam_video-{num_files+1}.mp4", vid_cod, 20.0, (int(cap.get(3)),int(cap.get(4))))
 
 # основной цикл
 while cap.isOpened:
@@ -90,7 +90,7 @@ while cap.isOpened:
 
 
 	cv2.imshow("glasses or not", image)
-	output.write(image)
+	#output.write(image)
 
 	k = cv2.waitKey(5) & 0xFF
 	if k==27:
@@ -98,4 +98,4 @@ while cap.isOpened:
 
 cap.release()
 cv2.destroyAllWindows()
-output.release()
+#output.release()
