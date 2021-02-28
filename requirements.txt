@@ -1,0 +1,7 @@
+torch==1.7.0
+torchvision==0.8.1
+dlib==19.21.1
+numpy==19.21.1
+opencv-python==4.5.1
+Pillow==8.1.0
+pandas==1.2.2

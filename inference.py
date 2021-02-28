@@ -1,6 +1,5 @@
 import cv2
 import dlib
-import imutils
 import torch
 import numpy as np
 from mobilenetv2_model import MobileNetV2
